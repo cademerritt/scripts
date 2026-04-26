@@ -1,13 +1,13 @@
 #!/bin/bash
 
-TRANS_DIR="/media/cade/E/trans"
+SPOOL_DIR="/media/cade/E/spool"
 DATE=$(date '+%-m.%-d.%y')
 TIME=$(date '+%H%M')
 FILENAME="$DATE-$TIME-L.txt"
-FILEPATH="$TRANS_DIR/$FILENAME"
+FILEPATH="$SPOOL_DIR/$FILENAME"
 
-if [ ! -d "$TRANS_DIR" ]; then
-    echo "Trans folder not found: $TRANS_DIR"
+if [ ! -d "$SPOOL_DIR" ]; then
+    echo "Spool directory not found: $SPOOL_DIR"
     exit 1
 fi
 
@@ -17,4 +17,4 @@ else
     cat > "$FILEPATH"
 fi
 
-echo "Trans file written: $FILENAME"
+echo "Spool file written: $FILENAME"
